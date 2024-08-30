@@ -32,7 +32,7 @@ jobs:
         choco install visualstudio2019-workload-vctools -y
 
     - name: Build wheels
-      run: python -m cibuildwheel --output-dir wheelhouse
+      run: python -m pip wheel -w DEST_DIR wheelhouse
         
     - uses: actions/upload-artifact@v4
       with: 
